@@ -2,7 +2,7 @@
 
 if [ -d /vagrant/deb ]; then
 	# Install from cache
-	dpkg -i /vagrant/deb/*.deb
+	dpkg -G -E -i /vagrant/deb/*.deb
 else 
 	curl -fsSL https://apt.dockerproject.org/gpg | apt-key add -
 
